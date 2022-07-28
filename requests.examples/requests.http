@@ -1,0 +1,16 @@
+@baseOrder=http://localhost:3000
+
+### CREATE ORDER
+POST {{baseOrder}}/orders
+Content-Type: application/json
+
+{
+  "name": "Snikers",
+  "price": 24.00,
+  "phoneNumber": "+123456789"
+}
+
+### GET all Orders
+GET {{baseOrder}}/orders
+
+###
