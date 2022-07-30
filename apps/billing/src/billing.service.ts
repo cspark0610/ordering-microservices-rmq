@@ -6,9 +6,7 @@ export class BillingService {
 
   async bill(payload: any) {
     this.logger.log(
-      `BillingService.billing called... with payload : ${JSON.stringify(
-        payload,
-      )}`,
+      `BillingService.bill called... with payload : ${JSON.stringify(payload)}`,
     );
   }
 }

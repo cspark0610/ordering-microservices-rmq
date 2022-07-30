@@ -1,4 +1,5 @@
 @baseOrder=http://localhost:3000
+@baseAuth=http://localhost:3001/auth
 
 ### CREATE ORDER
 POST {{baseOrder}}/orders
@@ -13,4 +14,27 @@ Content-Type: application/json
 ### GET all Orders
 GET {{baseOrder}}/orders
 
-###
+### Create a new user
+POST {{baseAuth}}/users
+Content-Type: application/json
+
+{
+  "email": "test@gmail.com",
+  "password": "testtest"
+}
+
+# {
+#   "_id": "62e53033564f96182f9cd0e9",
+#   "email": "test@gmail.com",
+#   "password": "$2b$10$bZVxb12ad89k5cSwOIBdl.GyDWDKhbBHJBVggqPJIpjfcRfMP9bqq"
+# }
+
+### Login a user
+
+POST {{baseAuth}}/login
+Content-Type: application/json
+
+{
+  "email": "test@gmail.com",
+  "password": "testtest"
+}
